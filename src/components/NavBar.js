@@ -6,7 +6,7 @@ function NavBar(){
             <a href="">Quienes somos</a>
             <a href="">Nuestro productos</a>
             <a href="">Nuestra ubicacíon</a>
-            <span class="material-symbols-outlined">
+            <span className="material-symbols-outlined">
                 shopping_cart_checkout
             </span>
         </nav>
