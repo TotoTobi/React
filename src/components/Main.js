@@ -1,30 +1,28 @@
 import React from "react";
 import {useState,useEffect} from "react";
+import {Routes, Route} from "react-router-dom";
+import Home from "./Home";
+import Productos from "./Productos";
+import QuienSoy from "./QuienSoy";
+import Carrito from "./Carrito";
 
+function Main (){
 
-
-function Main (props){
-    const [pintar,setPintar] = useState([]);
-    
-    const respuesta = () => {
-        fetch('https://fakestoreapi.com/products') 
-        .then(res=>res.json()) 
-        .then(json=> setPintar(json)) 
-        .catch((error) => 
-        console.log(error)
-        )
-    };
-    respuesta();
-    
-    const [contador, setContador] = useState(0);
     return(
         <main>
-            {/* <p>{props.params}</p> */}
-            <button onClick= {() => setContador(contador + 1)}>{contador}Bienn tutuuusss entendiste useState</button>
-            <button onClick={setPintar(pintar)}>Hace click padre para mas frases del comandante</button>
-            {pintar.map(item => <p>{pintar.name} </p> )}
+            <Routes>
+                {/* <Route path="/URL" element={<componente/>} /> <--- Ahi Tambien podemos 
+                escribir tipo como <p>Hola, esto tambien es valido</p> pero no me va a mostrar 
+                comocomponente ya que soy una simple etiqueta p "  */}
+                <Route path="/Home" element={<Home />} />
+                <Route path="/QuienSoy" element={<QuienSoy />} />
+                <Route path="/Productos" element={<Productos />} />
+                <Route path="/Carrito" element={<Carrito />} />
+                <Route/>
+            </Routes>
+            {/* {pintar.map(item => <p>{item.title} </p> )} */}
         </main>
         );
 };
 
-export default Main
+export default Main;
