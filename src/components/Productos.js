@@ -15,6 +15,7 @@ function Productos() {
 
     return(
         <section>
+            
             {pintar.map(item => <p>{item.title}</p>)}
         </section>
     )

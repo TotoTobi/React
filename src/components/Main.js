@@ -1,10 +1,9 @@
 import React from "react";
-import {useState,useEffect} from "react";
-import {Routes, Route} from "react-router-dom";
 import Home from "./Home";
 import Productos from "./Productos";
 import QuienSoy from "./QuienSoy";
 import Carrito from "./Carrito";
+import {Routes, Route} from "react-router-dom"
 
 function Main (){
 
